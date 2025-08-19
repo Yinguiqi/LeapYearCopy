@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkm6s42xnpmyh"]
+
+[ext_resource type="Texture2D" uid="uid://it1fj3bwjrji" path="res://assets/dichimodel.png" id="1_ebrpi"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ebrpi"]
+a = Vector2(-32, -32)
+b = Vector2(32, -32)
+
+[node name="dici" type="Area2D" groups=["dici"]]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ebrpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["dici"]]
+shape = SubResource("SegmentShape2D_ebrpi")
