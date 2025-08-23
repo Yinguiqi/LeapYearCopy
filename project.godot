@@ -13,13 +13,11 @@ config_version=5
 config/name="Leap Year Study"
 run/main_scene="uid://doj6tkh1q2dp0"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://assets/icon.svg"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
 window/stretch/mode="canvas_items"
 
 [global_group]

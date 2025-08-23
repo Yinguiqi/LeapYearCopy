@@ -1,27 +1,27 @@
 [gd_scene load_steps=28 format=3 uid="uid://doj6tkh1q2dp0"]
 
-[ext_resource type="Texture2D" uid="uid://cjmjuh2rwm2jr" path="res://assets/beijing.png" id="1_04qyp"]
-[ext_resource type="Script" uid="uid://dnb4aqnqp7tji" path="res://scripts/main.gd" id="1_j7wrs"]
-[ext_resource type="Texture2D" uid="uid://btelekfbsw5cl" path="res://assets/bianyuan.png" id="2_j7wrs"]
-[ext_resource type="PackedScene" uid="uid://bimub8gysjpi0" path="res://scenes/player.tscn" id="2_rnjyy"]
-[ext_resource type="PackedScene" uid="uid://dkm6s42xnpmyh" path="res://scenes/dici.tscn" id="5_04qyp"]
-[ext_resource type="Texture2D" uid="uid://by3hy1oawvxcr" path="res://assets/flag.png" id="5_fws66"]
-[ext_resource type="Script" uid="uid://c7q1kncaekfg0" path="res://scripts/pause_handler.gd" id="6_j7wrs"]
+[ext_resource type="Script" uid="uid://dnb4aqnqp7tji" path="res://scripts/main.gd" id="1_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://cjmjuh2rwm2jr" path="res://assets/background.png" id="2_tipki"]
+[ext_resource type="PackedScene" uid="uid://dkm6s42xnpmyh" path="res://scenes/spikes.tscn" id="3_85g3d"]
+[ext_resource type="Texture2D" uid="uid://btelekfbsw5cl" path="res://assets/background_edge.png" id="4_choun"]
+[ext_resource type="Texture2D" uid="uid://by3hy1oawvxcr" path="res://assets/flag_sprite.png" id="5_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://bimub8gysjpi0" path="res://scenes/player.tscn" id="6_eb6dy"]
+[ext_resource type="Script" uid="uid://c7q1kncaekfg0" path="res://scripts/pause_handler.gd" id="7_trceg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hh0fu"]
-atlas = ExtResource("5_fws66")
+atlas = ExtResource("5_ya4ey")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m5ht"]
-atlas = ExtResource("5_fws66")
+atlas = ExtResource("5_ya4ey")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dubn7"]
-atlas = ExtResource("5_fws66")
+atlas = ExtResource("5_ya4ey")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08kqv"]
-atlas = ExtResource("5_fws66")
+atlas = ExtResource("5_ya4ey")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f6ptj"]
@@ -105,63 +105,63 @@ a = Vector2(1983, 230)
 b = Vector2(389, 230)
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_j7wrs")
+script = ExtResource("1_o6xl0")
 
 [node name="background" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="background"]
 texture_filter = 1
 position = Vector2(960, 0)
-texture = ExtResource("1_04qyp")
+texture = ExtResource("2_tipki")
 
 [node name="dicimodel" type="Node2D" parent="background"]
 
-[node name="dici" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(-608, -60)
 
-[node name="dici2" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici2" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(-544, -60)
 
-[node name="dici3" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici3" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(-352, -60)
 
-[node name="dici4" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici4" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(-288, 4)
 
-[node name="dici5" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici5" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(-96, 4)
 
-[node name="dici6" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici6" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(-32, 4)
 
-[node name="dici7" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici7" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(32, 68)
 
-[node name="dici8" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici8" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(352, 260)
 
-[node name="dici9" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici9" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(2016, 68)
 
-[node name="dici10" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici10" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(2080, 68)
 
-[node name="dici11" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici11" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(2144, 68)
 
-[node name="dici12" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici12" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(2592, 68)
 
-[node name="dici13" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici13" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(2656, 68)
 
-[node name="dici14" parent="background/dicimodel" instance=ExtResource("5_04qyp")]
+[node name="dici14" parent="background/dicimodel" instance=ExtResource("3_85g3d")]
 position = Vector2(2720, 68)
 
 [node name="Sprite2D2" type="Sprite2D" parent="background"]
 texture_filter = 1
 position = Vector2(960, 0)
-texture = ExtResource("2_j7wrs")
+texture = ExtResource("4_choun")
 
 [node name="flag1" type="Area2D" parent="background" groups=["flag"]]
 
@@ -189,7 +189,7 @@ shape = SubResource("SegmentShape2D_3kg8w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="player" parent="." instance=ExtResource("2_rnjyy")]
+[node name="player" parent="." instance=ExtResource("6_eb6dy")]
 position = Vector2(-800, -188)
 
 [node name="WallCollisions" type="Node2D" parent="."]
@@ -244,7 +244,7 @@ polygon = PackedVector2Array(1984, 229, 1984, 100, 2176, 100, 2176, 228, 2304, 2
 
 [node name="PauseHandler" type="Node" parent="."]
 process_mode = 3
-script = ExtResource("6_j7wrs")
+script = ExtResource("7_trceg")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

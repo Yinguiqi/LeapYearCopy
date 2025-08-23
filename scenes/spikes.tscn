@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkm6s42xnpmyh"]
 
-[ext_resource type="Texture2D" uid="uid://it1fj3bwjrji" path="res://assets/dichimodel.png" id="1_ebrpi"]
+[ext_resource type="Texture2D" uid="uid://it1fj3bwjrji" path="res://assets/spikes_model.png" id="1_ebrpi"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ebrpi"]
 a = Vector2(-32, -32)

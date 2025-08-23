@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjmjuh2rwm2jr"
-path="res://.godot/imported/beijing.png-4f0d7e4862ded40277686720135e579d.ctex"
+uid="uid://btelekfbsw5cl"
+path="res://.godot/imported/background_edge.png-a1f3b09bfdbfdbaff9fab79792cffb69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/beijing.png"
-dest_files=["res://.godot/imported/beijing.png-4f0d7e4862ded40277686720135e579d.ctex"]
+source_file="res://assets/background_edge.png"
+dest_files=["res://.godot/imported/background_edge.png-a1f3b09bfdbfdbaff9fab79792cffb69.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://it1fj3bwjrji"
-path="res://.godot/imported/dichimodel.png-f378dd41c7654406135f0fbe9534151d.ctex"
+uid="uid://dyroae4mdt5dq"
+path="res://.godot/imported/player_sprite.png-a3952e8e3f763fc9ba912798959301c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dichimodel.png"
-dest_files=["res://.godot/imported/dichimodel.png-f378dd41c7654406135f0fbe9534151d.ctex"]
+source_file="res://assets/player_sprite.png"
+dest_files=["res://.godot/imported/player_sprite.png-a3952e8e3f763fc9ba912798959301c4.ctex"]
 
 [params]
 
