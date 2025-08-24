@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by3hy1oawvxcr"
-path="res://.godot/imported/flag_sprite.png-da6325bfcf2791f9c5ef8f65e11bd77c.ctex"
+uid="uid://btelekfbsw5cl"
+path="res://.godot/imported/background_edge.png-bd83117d062601d4d09a5171bcf6b0f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/flag_sprite.png"
-dest_files=["res://.godot/imported/flag_sprite.png-da6325bfcf2791f9c5ef8f65e11bd77c.ctex"]
+source_file="res://maps/background_edge.png"
+dest_files=["res://.godot/imported/background_edge.png-bd83117d062601d4d09a5171bcf6b0f9.ctex"]
 
 [params]
 

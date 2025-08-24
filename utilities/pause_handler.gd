@@ -38,7 +38,7 @@ func _input(event):
 
 # 创建复活遮罩
 func create_respawn_mask():
-	var mask_scene = preload("res://scenes/circle_mask.tscn")
+	var mask_scene = preload("res://shader/resurrection_mask/circle_mask.tscn")
 	var mask = mask_scene.instantiate()
 	# 添加到场景（确保在最上层）
 	get_tree().root.add_child(mask)
