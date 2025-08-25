@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl2a777u8davo"]
+
+[ext_resource type="Script" uid="uid://b40nwttlxamw2" path="res://main_menu/menu.gd" id="1_8c7om"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchor_right = 0.44
+anchor_bottom = 0.719
+offset_right = 1075.2
+offset_bottom = 303.48
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+script = ExtResource("1_8c7om")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 48.4
+offset_right = 207.0
+offset_bottom = 149.4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "游玩"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "设置"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "退出"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

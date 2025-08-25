@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Leap Year Study"
-run/main_scene="uid://doj6tkh1q2dp0"
+run/main_scene="uid://cl2a777u8davo"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]
