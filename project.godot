@@ -14,6 +14,10 @@ config/name="Leap Year Study"
 run/main_scene="uid://cl2a777u8davo"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+AudioManager="*res://utilities/audio_manager.tscn"
+
 [display]
 
 window/size/viewport_width=1920
