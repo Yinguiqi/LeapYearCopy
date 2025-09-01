@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://w5dgqco4xvoq"]
+[gd_scene load_steps=4 format=3 uid="uid://w5dgqco4xvoq"]
 
 [ext_resource type="Script" uid="uid://byb88eh71nedd" path="res://utilities/audio_manager.gd" id="1_n0q5e"]
 [ext_resource type="AudioStream" uid="uid://cqxp04k8dqjuj" path="res://assets/audio/mus_temple.mp3" id="2_wlrwo"]
+[ext_resource type="AudioStream" uid="uid://beb5e55b5v5cx" path="res://entities/player/sfx/14_human_death_spin.wav" id="3_v25n7"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_n0q5e")
@@ -9,3 +10,11 @@ script = ExtResource("1_n0q5e")
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_wlrwo")
 autoplay = true
+bus = &"BGM"
+
+[node name="SFX" type="Node" parent="."]
+process_mode = 3
+
+[node name="Death" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_v25n7")
+bus = &"SFX"

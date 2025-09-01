@@ -2,10 +2,13 @@ extends Control
 
 @onready var main_scene_bgm: AudioStream = preload("res://assets/audio/mus_cave.mp3")
 
+@export var bgm: AudioStream
+
+func _ready() -> void:
+	if bgm:
+		AudioManager.play_bgm(bgm)
+
 func _on_play_pressed() -> void:
-	 # 首先切换音乐
-	AudioManager.change_bgm(main_scene_bgm)
-	# 然后切换场景
 	get_tree().change_scene_to_file("res://main_menu/main.tscn")
 
 

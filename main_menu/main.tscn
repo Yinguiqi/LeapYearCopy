@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://doj6tkh1q2dp0"]
+[gd_scene load_steps=29 format=3 uid="uid://doj6tkh1q2dp0"]
 
 [ext_resource type="Script" uid="uid://dnb4aqnqp7tji" path="res://main_menu/main.gd" id="1_0uv3h"]
+[ext_resource type="AudioStream" uid="uid://c7jfyb00rjl3p" path="res://assets/audio/mus_cave.mp3" id="2_qxcv0"]
 [ext_resource type="Texture2D" uid="uid://cjmjuh2rwm2jr" path="res://maps/background.png" id="2_wsrtl"]
 [ext_resource type="PackedScene" uid="uid://dkm6s42xnpmyh" path="res://entities/spikes/spikes.tscn" id="3_qxcv0"]
 [ext_resource type="Texture2D" uid="uid://btelekfbsw5cl" path="res://maps/background_edge.png" id="4_dhxip"]
@@ -106,6 +107,7 @@ b = Vector2(389, 230)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0uv3h")
+bgm = ExtResource("2_qxcv0")
 
 [node name="background" type="Node2D" parent="."]
 
@@ -189,7 +191,7 @@ shape = SubResource("SegmentShape2D_3kg8w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="player" parent="." instance=ExtResource("6_iwqfc")]
+[node name="Player" parent="." instance=ExtResource("6_iwqfc")]
 position = Vector2(-800, -188)
 
 [node name="WallCollisions" type="Node2D" parent="."]
@@ -249,4 +251,4 @@ script = ExtResource("7_vwdnp")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 
-[connection signal="area_entered" from="background/flag1" to="player" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="background/flag1" to="Player" method="_on_area_2d_area_entered"]

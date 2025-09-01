@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cl2a777u8davo"]
+[gd_scene load_steps=3 format=3 uid="uid://cl2a777u8davo"]
 
 [ext_resource type="Script" uid="uid://b40nwttlxamw2" path="res://main_menu/menu.gd" id="1_8c7om"]
+[ext_resource type="AudioStream" uid="uid://cqxp04k8dqjuj" path="res://assets/audio/mus_temple.mp3" id="2_hfbip"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(5, 5)
 script = ExtResource("1_8c7om")
+bgm = ExtResource("2_hfbip")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0

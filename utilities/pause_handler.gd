@@ -1,6 +1,6 @@
 extends Node
 @onready var camera2d : Camera2D = $"../Camera2D"
-@onready var player : CharacterBody2D = $"../player"
+@onready var player : CharacterBody2D = $"../Player"
 @onready var timer: Timer = $"../Timer"
 func _ready():
 	# 确保节点在暂停时仍能处理输入

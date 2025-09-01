@@ -1,6 +1,8 @@
 extends CharacterBody2D
+
 @onready var flag_1: AnimatedSprite2D = $"../background/flag1/flag1"
 @onready var flag_2: AnimatedSprite2D = $"../background/flag2/flag2"
+
 
 # 移动速度
 var move_speed : float = 250
@@ -113,7 +115,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func die():
 	is_dead = true
-	#animator.play("death")  # 播放死亡动画（你自己命名的动画）
 	get_tree().paused = true  # 暂停游戏
-	
+	AudioManager.play_sfx("Death")
 	jump_state = JumpState.GROUNDED
