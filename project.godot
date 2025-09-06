@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 [autoload]
 
 AudioManager="*res://utilities/audio_manager.tscn"
+Menu="*res://main_menu/menu.gd"
 
 [display]
 

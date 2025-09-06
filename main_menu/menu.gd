@@ -1,10 +1,11 @@
 extends Control
 
-@onready var main_scene_bgm: AudioStream = preload("res://assets/audio/mus_cave.mp3")
-
 @export var bgm: AudioStream
 
+const CONFIG_PATH := "user://config.ini"
+
 func _ready() -> void:
+	load_config()
 	if bgm:
 		AudioManager.play_bgm(bgm)
 
@@ -18,3 +19,31 @@ func _on_options_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func save_config() -> void:
+	var config := ConfigFile.new()
+	
+	config.set_value("audio","master",AudioManager.get_volume(AudioManager.Bus.MASTER))
+	config.set_value("audio","sfx",AudioManager.get_volume(AudioManager.Bus.SFX))
+	config.set_value("audio","bgm",AudioManager.get_volume(AudioManager.Bus.BGM))
+	
+	config.save(CONFIG_PATH)
+	
+func load_config() -> void:
+	var config := ConfigFile.new()
+	config.load(CONFIG_PATH)
+	
+	AudioManager.set_volume(
+		AudioManager.Bus.MASTER,
+		config.get_value("audio","master",0.5)
+	)
+	AudioManager.set_volume(
+		AudioManager.Bus.SFX,
+		config.get_value("audio","sfx",1.0)
+	)
+	AudioManager.set_volume(
+		AudioManager.Bus.BGM,
+		config.get_value("audio","bgm",1.0)
+	)
+	
