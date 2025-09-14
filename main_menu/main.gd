@@ -20,3 +20,8 @@ func _process(delta: float) -> void:
 		has_moved = false
 		var tween := create_tween()
 		tween.tween_property(camera2d, "global_position:x", 0, 0.75)
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		# 切换到主菜单场景
+		get_tree().change_scene_to_file("res://main_menu/menu.tscn")

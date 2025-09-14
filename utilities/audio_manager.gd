@@ -7,7 +7,7 @@ enum Bus { MASTER, SFX, BGM }
 
 
 func play_bgm(stream: AudioStream) -> void:
-	if bgm_player == stream and bgm_player.playing:
+	if bgm_player.stream == stream and bgm_player.playing:
 		return
 	bgm_player.stream = stream
 	bgm_player.play()

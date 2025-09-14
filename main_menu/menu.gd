@@ -6,7 +6,7 @@ const CONFIG_PATH := "user://config.ini"
 
 func _ready() -> void:
 	load_config()
-	if bgm:
+	if bgm and not bgm.resource_path.get_file().get_basename().contains("mus_temple"):
 		AudioManager.play_bgm(bgm)
 
 func _on_play_pressed() -> void:
