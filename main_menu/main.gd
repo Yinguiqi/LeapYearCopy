@@ -1,12 +1,13 @@
 extends Node2D
 
 @onready var camera2d : Camera2D = $Camera2D
-@onready var player : CharacterBody2D = $Player
+@onready var player := $Player
 @export var bgm: AudioStream
 
 var has_moved := false
 
 func _ready() -> void:
+	player.load_player_config()
 	if bgm:
 		AudioManager.play_bgm(bgm)
 
@@ -25,3 +26,7 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		# 切换到主菜单场景
 		get_tree().change_scene_to_file("res://main_menu/menu.tscn")
+
+
+	
+	

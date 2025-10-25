@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var flag_1: AnimatedSprite2D = $"../background/flag1/flag1"
 @onready var flag_2: AnimatedSprite2D = $"../background/flag2/flag2"
 
-
+const CONFIG_PATH := "user://config.ini"
 # 移动速度
 var move_speed : float = 250
 # 跳跃力度
@@ -108,6 +108,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		
 	if area.name == "flag2":
 		respawn_position = area.global_position
+		save_player_config()
 		flag_2.visible = true
 		flag_1.visible = false
 
@@ -118,3 +119,19 @@ func die():
 	get_tree().paused = true  # 暂停游戏
 	AudioManager.play_sfx("Death")
 	jump_state = JumpState.GROUNDED
+
+func load_player_config() -> void:
+	var config := ConfigFile.new()
+	config.load(CONFIG_PATH)
+	var x = config.get_value("player", "respawn_x", -800)
+	var y = config.get_value("player", "respawn_y", -188)
+	respawn_position = Vector2(x, y)	
+	position = respawn_position
+	
+func save_player_config() -> void:
+	var config := ConfigFile.new()
+
+	config.set_value("player", "respawn_x", respawn_position.x)
+	config.set_value("player", "respawn_y", respawn_position.y)
+	config.save(CONFIG_PATH)
+	

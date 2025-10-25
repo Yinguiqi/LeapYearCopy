@@ -12,6 +12,8 @@ func _ready() -> void:
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://main_menu/main.tscn")
 
+func _on_continue_pressed() -> void:
+	pass # Replace with function body.
 
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://main_menu/options_meun.tscn")
@@ -21,9 +23,12 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 
+
+
+
 func save_config() -> void:
 	var config := ConfigFile.new()
-	
+	config.load(CONFIG_PATH)
 	config.set_value("audio","master",AudioManager.get_volume(AudioManager.Bus.MASTER))
 	config.set_value("audio","sfx",AudioManager.get_volume(AudioManager.Bus.SFX))
 	config.set_value("audio","bgm",AudioManager.get_volume(AudioManager.Bus.BGM))
