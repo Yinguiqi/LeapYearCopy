@@ -10,10 +10,11 @@ func _ready() -> void:
 		AudioManager.play_bgm(bgm)
 
 func _on_play_pressed() -> void:
+	SaveManager.firstpostion()
 	get_tree().change_scene_to_file("res://main_menu/main.tscn")
 
 func _on_continue_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://main_menu/main.tscn")
 
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://main_menu/options_meun.tscn")

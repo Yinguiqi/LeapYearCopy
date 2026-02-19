@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 @onready var flag_1: AnimatedSprite2D = $"../background/flag1/flag1"
 @onready var flag_2: AnimatedSprite2D = $"../background/flag2/flag2"
-
-const CONFIG_PATH := "user://config.ini"
 # 移动速度
 var move_speed : float = 250
 # 跳跃力度
@@ -120,9 +118,7 @@ func die():
 	AudioManager.play_sfx("Death")
 	jump_state = JumpState.GROUNDED
 
-func load_player_config() -> void:
-	var config := ConfigFile.new()
-	config.load(CONFIG_PATH)
+func load_player_config(config: ConfigFile) -> void:
 	var x = config.get_value("player", "respawn_x", -800)
 	var y = config.get_value("player", "respawn_y", -188)
 	respawn_position = Vector2(x, y)	
@@ -133,5 +129,5 @@ func save_player_config() -> void:
 
 	config.set_value("player", "respawn_x", respawn_position.x)
 	config.set_value("player", "respawn_y", respawn_position.y)
-	config.save(CONFIG_PATH)
+	config.save(Menu.CONFIG_PATH)
 	

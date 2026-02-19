@@ -8,22 +8,29 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Leap Year Study"
 run/main_scene="uid://cl2a777u8davo"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
 AudioManager="*res://utilities/audio_manager.tscn"
 Menu="*res://main_menu/menu.gd"
+SaveManager="*uid://chnoj5k30kuel"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=4
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [global_group]
 

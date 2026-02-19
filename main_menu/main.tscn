@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://doj6tkh1q2dp0"]
+[gd_scene format=3 uid="uid://doj6tkh1q2dp0"]
 
 [ext_resource type="Script" uid="uid://dnb4aqnqp7tji" path="res://main_menu/main.gd" id="1_0uv3h"]
 [ext_resource type="AudioStream" uid="uid://c7jfyb00rjl3p" path="res://assets/audio/mus_cave.mp3" id="2_qxcv0"]
@@ -105,150 +105,150 @@ b = Vector2(387, 232)
 a = Vector2(1983, 230)
 b = Vector2(389, 230)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1950613472]
 script = ExtResource("1_0uv3h")
 bgm = ExtResource("2_qxcv0")
 
-[node name="background" type="Node2D" parent="."]
+[node name="background" type="Node2D" parent="." unique_id=796255346]
 
-[node name="Sprite2D" type="Sprite2D" parent="background"]
+[node name="Sprite2D" type="Sprite2D" parent="background" unique_id=941044031]
 texture_filter = 1
 position = Vector2(960, 0)
 texture = ExtResource("2_wsrtl")
 
-[node name="dicimodel" type="Node2D" parent="background"]
+[node name="dicimodel" type="Node2D" parent="background" unique_id=743679742]
 
-[node name="dici" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici" parent="background/dicimodel" unique_id=91446385 instance=ExtResource("3_qxcv0")]
 position = Vector2(-608, -60)
 
-[node name="dici2" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici2" parent="background/dicimodel" unique_id=344417597 instance=ExtResource("3_qxcv0")]
 position = Vector2(-544, -60)
 
-[node name="dici3" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici3" parent="background/dicimodel" unique_id=761352428 instance=ExtResource("3_qxcv0")]
 position = Vector2(-352, -60)
 
-[node name="dici4" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici4" parent="background/dicimodel" unique_id=294642513 instance=ExtResource("3_qxcv0")]
 position = Vector2(-288, 4)
 
-[node name="dici5" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici5" parent="background/dicimodel" unique_id=681983464 instance=ExtResource("3_qxcv0")]
 position = Vector2(-96, 4)
 
-[node name="dici6" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici6" parent="background/dicimodel" unique_id=1504901128 instance=ExtResource("3_qxcv0")]
 position = Vector2(-32, 4)
 
-[node name="dici7" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici7" parent="background/dicimodel" unique_id=1238109425 instance=ExtResource("3_qxcv0")]
 position = Vector2(32, 68)
 
-[node name="dici8" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici8" parent="background/dicimodel" unique_id=1843249805 instance=ExtResource("3_qxcv0")]
 position = Vector2(352, 260)
 
-[node name="dici9" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici9" parent="background/dicimodel" unique_id=2098327711 instance=ExtResource("3_qxcv0")]
 position = Vector2(2016, 68)
 
-[node name="dici10" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici10" parent="background/dicimodel" unique_id=1659188416 instance=ExtResource("3_qxcv0")]
 position = Vector2(2080, 68)
 
-[node name="dici11" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici11" parent="background/dicimodel" unique_id=441106544 instance=ExtResource("3_qxcv0")]
 position = Vector2(2144, 68)
 
-[node name="dici12" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici12" parent="background/dicimodel" unique_id=181587295 instance=ExtResource("3_qxcv0")]
 position = Vector2(2592, 68)
 
-[node name="dici13" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici13" parent="background/dicimodel" unique_id=492227300 instance=ExtResource("3_qxcv0")]
 position = Vector2(2656, 68)
 
-[node name="dici14" parent="background/dicimodel" instance=ExtResource("3_qxcv0")]
+[node name="dici14" parent="background/dicimodel" unique_id=48351955 instance=ExtResource("3_qxcv0")]
 position = Vector2(2720, 68)
 
-[node name="Sprite2D2" type="Sprite2D" parent="background"]
+[node name="Sprite2D2" type="Sprite2D" parent="background" unique_id=1223564015]
 texture_filter = 1
 position = Vector2(960, 0)
 texture = ExtResource("4_dhxip")
 
-[node name="flag1" type="Area2D" parent="background" groups=["flag"]]
+[node name="flag1" type="Area2D" parent="background" unique_id=2078325026 groups=["flag"]]
 
-[node name="flag1" type="AnimatedSprite2D" parent="background/flag1"]
+[node name="flag1" type="AnimatedSprite2D" parent="background/flag1" unique_id=1379695576]
 position = Vector2(-770, -188)
 sprite_frames = SubResource("SpriteFrames_f6ptj")
 animation = &"run"
 autoplay = "run"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/flag1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/flag1" unique_id=1026714593]
 shape = SubResource("SegmentShape2D_xtx0q")
 
-[node name="flag2" type="Area2D" parent="background" groups=["flag"]]
+[node name="flag2" type="Area2D" parent="background" unique_id=844586557 groups=["flag"]]
 position = Vector2(1825, 66)
 
-[node name="flag2" type="AnimatedSprite2D" parent="background/flag2"]
+[node name="flag2" type="AnimatedSprite2D" parent="background/flag2" unique_id=1314709398]
 visible = false
 position = Vector2(20, 0)
 sprite_frames = SubResource("SpriteFrames_f6ptj")
 animation = &"run"
 autoplay = "run"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/flag2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/flag2" unique_id=1023605775]
 shape = SubResource("SegmentShape2D_3kg8w")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1584920942]
 
-[node name="Player" parent="." instance=ExtResource("6_iwqfc")]
+[node name="Player" parent="." unique_id=1744726758 instance=ExtResource("6_iwqfc")]
 position = Vector2(-800, -188)
 
-[node name="WallCollisions" type="Node2D" parent="."]
+[node name="WallCollisions" type="Node2D" parent="." unique_id=1782332423]
 visible = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WallCollisions"]
+[node name="StaticBody2D" type="StaticBody2D" parent="WallCollisions" unique_id=1802748582]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=2026989615]
 shape = SubResource("SegmentShape2D_4dvvg")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=927603022]
 shape = SubResource("SegmentShape2D_rnjyy")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=85669761]
 shape = SubResource("SegmentShape2D_4vge2")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=877361301]
 shape = SubResource("SegmentShape2D_04qyp")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=571079840]
 shape = SubResource("SegmentShape2D_j7wrs")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=1324441883]
 shape = SubResource("SegmentShape2D_fws66")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=1897565379]
 shape = SubResource("SegmentShape2D_hh0fu")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=599965326]
 shape = SubResource("SegmentShape2D_3m5ht")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=2051529373]
 shape = SubResource("SegmentShape2D_dubn7")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=1752395517]
 shape = SubResource("SegmentShape2D_08kqv")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=969216157]
 shape = SubResource("SegmentShape2D_f6ptj")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=1881420141]
 shape = SubResource("SegmentShape2D_hsdmi")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="WallCollisions/StaticBody2D" unique_id=1399858557]
 shape = SubResource("SegmentShape2D_ifa78")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallCollisions/StaticBody2D" unique_id=36128365]
 polygon = PackedVector2Array(1919, 164, 1920, 100, 1728, 100, 1729, 35, 2240, 36, 2241, -347, 1663, -348, 1665, 165)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WallCollisions/StaticBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WallCollisions/StaticBody2D" unique_id=1902340264]
 polygon = PackedVector2Array(1984, 229, 1984, 100, 2176, 100, 2176, 228, 2304, 228, 2304, 164, 2432, 164, 2432, 228, 2560, 228, 2560, 100, 2752, 100, 2752, 292, 2880, 292, 2025, 356)
 
-[node name="PauseHandler" type="Node" parent="."]
+[node name="PauseHandler" type="Node" parent="." unique_id=1544154263]
 process_mode = 3
 script = ExtResource("7_vwdnp")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1373045717]
 wait_time = 0.5
 
 [connection signal="area_entered" from="background/flag1" to="Player" method="_on_area_2d_area_entered"]

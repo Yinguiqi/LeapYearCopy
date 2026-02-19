@@ -1,45 +1,63 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfiucu2rkkva6"]
+[gd_scene format=3 uid="uid://bfiucu2rkkva6"]
 
 [ext_resource type="Script" uid="uid://bkhcy384t5i3g" path="res://main_menu/options_meun.gd" id="1_61dh6"]
 
-[node name="options_meun" type="Control"]
+[node name="options_meun" type="Control" unique_id=71980961]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_61dh6")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1004543911]
 layout_mode = 1
-offset_right = 383.99997
-offset_bottom = 215.99998
-scale = Vector2(5, 5)
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 300
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=66342142]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=580253756]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=156072290]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "总音量"
 
-[node name="VolumeSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VolumeSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=925957807]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 4
 max_value = 1.0
 step = 0.1
 value = 0.5
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1431847141]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=795561002]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "音乐音量"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=300046133]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1374991678]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "音效音量"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1645953002]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 40
 text = "返回"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
