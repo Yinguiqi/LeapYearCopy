@@ -5,11 +5,13 @@ extends Node2D
 @export var bgm: AudioStream
 const CONFIG_PATH := "user://config.ini"
 var has_moved := false
+const CAMERA_STEP := 1920.0
 
 func _ready() -> void:
 	var config := ConfigFile.new()
 	config.load(CONFIG_PATH)
 	player.load_player_config(config)
+	camera_position()
 	if bgm:
 		AudioManager.play_bgm(bgm)
 
@@ -23,6 +25,12 @@ func _process(delta: float) -> void:
 		has_moved = false
 		var tween := create_tween()
 		tween.tween_property(camera2d, "global_position:x", 0, 0.5)
+
+func camera_position() -> void:
+	var px = player.respawn_position.x + 960
+	var index = floor(px / CAMERA_STEP)
+	camera2d.position.x = index * CAMERA_STEP
+	print(camera2d.position.x)
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):

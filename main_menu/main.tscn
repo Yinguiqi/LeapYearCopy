@@ -168,7 +168,7 @@ texture = ExtResource("4_dhxip")
 [node name="flag1" type="Area2D" parent="background" unique_id=2078325026 groups=["flag"]]
 
 [node name="flag1" type="AnimatedSprite2D" parent="background/flag1" unique_id=1379695576]
-position = Vector2(-770, -188)
+position = Vector2(-770, -194)
 sprite_frames = SubResource("SpriteFrames_f6ptj")
 animation = &"run"
 autoplay = "run"
